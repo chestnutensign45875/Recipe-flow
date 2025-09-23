@@ -1,0 +1,209 @@
+{
+  "recipes": [
+    {
+      "id": "masala-dosa-south",
+      "title": "Masala Dosa",
+      "cuisine": { "region": "Indian", "subregion": "South Indian" },
+      "hero_image": "masala-dosa-hero.jpg",
+      "total_time_min": 40,
+      "difficulty": "Medium",
+      "serves": 4,
+      "prerequisites": [
+        "Cast-iron griddle preheating for 5 minutes",
+        "Potato boiled and mashed from previous day",
+        "Dosa batter fermented overnight"
+      ],
+      "diet": ["vegetarian", "gluten-free"],
+      "mood_tags": ["enjoy", "relax"],
+      "description": "Crispy South Indian crepe filled with spiced potato masala, served with coconut chutney and sambar.",
+      "steps": [
+        {
+          "index": 1,
+          "emoji": "🔪",
+          "title": "Prepare potato masala",
+          "text": "Heat oil in pan, add mustard seeds and curry leaves. When they splutter, add chopped onions, green chilies and ginger. Sauté until onions turn golden. Add turmeric, mashed potatoes and salt. Mix well and cook for 6 minutes.",
+          "image": "cooking-timer.jpg",
+          "timer_min": 6,
+          "linked_ingredients": ["potato", "onion"],
+          "youtube": "MASTER_CHEF_OF_INDIA_VIDEO_LINK"
+        },
+        {
+          "index": 2,
+          "emoji": "🥘",
+          "title": "Make the dosa",
+          "text": "Heat griddle, pour a ladle of batter in center and spread it thin in circular motion. Drizzle oil around edges and cook until golden brown, approximately 3 minutes.",
+          "image": "masala-dosa-hero.jpg",
+          "timer_min": 3,
+          "linked_ingredients": ["dosa batter", "oil"]
+        },
+        {
+          "index": 3,
+          "emoji": "🌯",
+          "title": "Fill and fold",
+          "text": "Place potato masala on one half of the dosa, fold over and serve hot with coconut chutney and sambar.",
+          "image": "masala-dosa-hero.jpg",
+          "timer_min": 1,
+          "linked_ingredients": ["coconut chutney", "sambar"]
+        }
+      ],
+      "ingredients": [
+        { "name": "potato", "qty": 4, "unit": "large", "substitutions": ["sweet potato", "cauliflower"] },
+        { "name": "dosa batter", "qty": 2, "unit": "cups", "substitutions": [] },
+        { "name": "onion", "qty": 1, "unit": "medium", "substitutions": ["shallots"] },
+        { "name": "mustard seeds", "qty": 1, "unit": "tsp", "substitutions": [] },
+        { "name": "curry leaves", "qty": 10, "unit": "pieces", "substitutions": [] },
+        { "name": "oil", "qty": 3, "unit": "tbsp", "substitutions": ["ghee"] },
+        { "name": "coconut chutney", "qty": 1, "unit": "cup", "substitutions": [] },
+        { "name": "sambar", "qty": 1, "unit": "cup", "substitutions": [] }
+      ],
+      "nutritional_info": {
+        "calories": 320,
+        "protein": "8g",
+        "carbs": "45g",
+        "fat": "12g"
+      }
+    },
+    {
+      "id": "spaghetti-aglio-olio-global",
+      "title": "Spaghetti Aglio e Olio",
+      "cuisine": { "region": "Global", "subregion": "Italian" },
+      "hero_image": "spaghetti-aglio-hero.jpg",
+      "total_time_min": 20,
+      "difficulty": "Easy",
+      "serves": 2,
+      "prerequisites": [
+        "Large pot of salted water boiling",
+        "Garlic thinly sliced"
+      ],
+      "diet": ["vegetarian", "dairy-free"],
+      "mood_tags": ["fast", "lazy"],
+      "description": "Classic Italian pasta with garlic, olive oil, and red pepper flakes - simple yet incredibly flavorful.",
+      "steps": [
+        {
+          "index": 1,
+          "emoji": "🍝",
+          "title": "Cook the pasta",
+          "text": "Add spaghetti to boiling salted water and cook according to package directions, usually 8-10 minutes until al dente. Reserve 1 cup pasta water before draining.",
+          "image": "spaghetti-aglio-hero.jpg",
+          "timer_min": 9,
+          "linked_ingredients": ["spaghetti"],
+          "youtube": "MASTER_CHEF_ITALIAN_VIDEO_LINK"
+        },
+        {
+          "index": 2,
+          "emoji": "🧄",
+          "title": "Prepare aglio e olio",
+          "text": "In large skillet, heat olive oil over medium heat. Add sliced garlic and red pepper flakes. Cook until garlic is golden and fragrant, about 2-3 minutes. Don't let it burn!",
+          "image": "spaghetti-aglio-hero.jpg",
+          "timer_min": 3,
+          "linked_ingredients": ["garlic", "olive oil"]
+        },
+        {
+          "index": 3,
+          "emoji": "🌿",
+          "title": "Combine and serve",
+          "text": "Add drained pasta to the skillet with garlic oil. Toss with pasta water if needed. Add parsley, season with salt and pepper. Serve immediately with parmesan if desired.",
+          "image": "spaghetti-aglio-hero.jpg",
+          "timer_min": 2,
+          "linked_ingredients": ["parsley", "parmesan"]
+        }
+      ],
+      "ingredients": [
+        { "name": "spaghetti", "qty": 200, "unit": "g", "substitutions": ["linguine", "angel hair"] },
+        { "name": "garlic", "qty": 4, "unit": "cloves", "substitutions": [] },
+        { "name": "olive oil", "qty": 4, "unit": "tbsp", "substitutions": [] },
+        { "name": "red pepper flakes", "qty": 0.5, "unit": "tsp", "substitutions": ["fresh chili"] },
+        { "name": "parsley", "qty": 2, "unit": "tbsp", "substitutions": ["basil"] },
+        { "name": "parmesan", "qty": 2, "unit": "tbsp", "substitutions": ["nutritional yeast"] }
+      ],
+      "nutritional_info": {
+        "calories": 380,
+        "protein": "12g",
+        "carbs": "58g",
+        "fat": "14g"
+      }
+    },
+    {
+      "id": "butter-chicken-north",
+      "title": "Butter Chicken",
+      "cuisine": { "region": "Indian", "subregion": "North Indian" },
+      "hero_image": "indian-spices.jpg",
+      "total_time_min": 60,
+      "difficulty": "Medium",
+      "serves": 4,
+      "prerequisites": [
+        "Chicken marinated for 2+ hours",
+        "Onions and tomatoes prepped"
+      ],
+      "diet": ["gluten-free"],
+      "mood_tags": ["enjoy", "relax"],
+      "description": "Rich and creamy North Indian curry with tender chicken in a tomato-butter sauce.",
+      "steps": [
+        {
+          "index": 1,
+          "emoji": "🍗",
+          "title": "Cook marinated chicken",
+          "text": "Heat oil in heavy-bottomed pan. Add marinated chicken pieces and cook until golden brown on all sides, about 8-10 minutes. Remove and set aside.",
+          "image": "indian-spices.jpg",
+          "timer_min": 10,
+          "linked_ingredients": ["chicken", "yogurt"],
+          "youtube": "MASTER_CHEF_OF_INDIA_BUTTER_CHICKEN"
+        },
+        {
+          "index": 2,
+          "emoji": "🧅",
+          "title": "Make base gravy",
+          "text": "In same pan, add butter, onions, ginger-garlic paste. Cook until onions are golden. Add tomato puree, cook for 15 minutes until oil separates.",
+          "image": "indian-spices.jpg",
+          "timer_min": 15,
+          "linked_ingredients": ["onion", "tomato", "butter"]
+        },
+        {
+          "index": 3,
+          "emoji": "🥛",
+          "title": "Finish with cream",
+          "text": "Add chicken back to pan, pour in cream, add garam masala and salt. Simmer for 10 minutes until chicken is cooked through and sauce is creamy.",
+          "image": "indian-spices.jpg",
+          "timer_min": 10,
+          "linked_ingredients": ["cream", "garam masala"]
+        }
+      ],
+      "ingredients": [
+        { "name": "chicken", "qty": 500, "unit": "g", "substitutions": ["paneer", "cauliflower"] },
+        { "name": "yogurt", "qty": 0.5, "unit": "cup", "substitutions": ["coconut yogurt"] },
+        { "name": "onion", "qty": 2, "unit": "large", "substitutions": [] },
+        { "name": "tomato", "qty": 4, "unit": "large", "substitutions": ["canned tomatoes"] },
+        { "name": "butter", "qty": 3, "unit": "tbsp", "substitutions": ["ghee"] },
+        { "name": "cream", "qty": 0.5, "unit": "cup", "substitutions": ["coconut cream"] },
+        { "name": "garam masala", "qty": 1, "unit": "tbsp", "substitutions": [] }
+      ],
+      "nutritional_info": {
+        "calories": 420,
+        "protein": "28g",
+        "carbs": "12g",
+        "fat": "32g"
+      }
+    }
+  ],
+  "cuisines": [
+    {
+      "region": "Indian",
+      "subregions": [
+        { "name": "South Indian", "color": "south-indian-green", "description": "Coconut, curry leaves, and fermented delights" },
+        { "name": "North Indian", "color": "north-indian-warm", "description": "Rich gravies, tandoor, and dairy-based dishes" },
+        { "name": "East Indian", "color": "indian-curry", "description": "Fish, rice, and subtle sweet flavors" },
+        { "name": "West Indian", "color": "indian-chili", "description": "Bold spices, street food, and coastal influences" },
+        { "name": "Central", "color": "indian-tamarind", "description": "Wheat-based breads and rustic preparations" }
+      ]
+    },
+    {
+      "region": "Global",
+      "subregions": [
+        { "name": "Italian", "color": "global-tomato", "description": "Pasta, pizza, and Mediterranean flavors" },
+        { "name": "Mediterranean", "color": "global-teal", "description": "Olive oil, fresh herbs, and healthy grains" },
+        { "name": "Asian", "color": "global-basil", "description": "Balanced flavors, fresh ingredients, and quick cooking" },
+        { "name": "French", "color": "global-teal", "description": "Classical techniques and refined flavors" }
+      ]
+    }
+  ]
+}

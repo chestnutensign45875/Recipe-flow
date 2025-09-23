@@ -57,6 +57,49 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Cuisine-specific colors
+        indian: {
+          saffron: "hsl(var(--indian-saffron))",
+          tamarind: "hsl(var(--indian-tamarind))",
+          curry: "hsl(var(--indian-curry))",
+          chili: "hsl(var(--indian-chili))",
+        },
+        "south-indian": {
+          coconut: "hsl(var(--south-indian-coconut))",
+          green: "hsl(var(--south-indian-green))",
+        },
+        "north-indian": {
+          warm: "hsl(var(--north-indian-warm))",
+          gold: "hsl(var(--north-indian-gold))",
+        },
+        global: {
+          teal: "hsl(var(--global-teal))",
+          tomato: "hsl(var(--global-tomato))",
+          basil: "hsl(var(--global-basil))",
+        },
+        timer: {
+          active: "hsl(var(--timer-active))",
+          warning: "hsl(var(--timer-warning))",
+          complete: "hsl(var(--timer-complete))",
+        },
+      },
+      backgroundImage: {
+        'gradient-saffron': 'var(--gradient-saffron)',
+        'gradient-spice': 'var(--gradient-spice)',
+        'gradient-coconut': 'var(--gradient-coconut)',
+        'gradient-warm': 'var(--gradient-warm)',
+        'gradient-global': 'var(--gradient-global)',
+      },
+      boxShadow: {
+        'warm': 'var(--shadow-warm)',
+        'spice': 'var(--shadow-spice)',
+        'soft': 'var(--shadow-soft)',
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-timer": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "bounce-timer": "bounce 1s infinite",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +123,6 @@ export default {
             height: "0",
           },
         },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
