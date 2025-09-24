@@ -10,11 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 import { ActiveTimer } from "./TimerTray";
 
-// Import images
-import masalaDosaHero from "@/assets/masala-dosa-hero.jpg";
-import spaghettiAglioHero from "@/assets/spaghetti-aglio-hero.jpg";
-import indianSpices from "@/assets/indian-spices.jpg";
-import cookingTimer from "@/assets/cooking-timer.jpg";
+const images = import.meta.glob('@/assets/*.jpg', { eager: true, as: 'url' });
 
 interface Recipe {
   id: string;
@@ -64,13 +60,9 @@ export function RecipeDetail({ recipe, onBack, onStartTimer, activeTimers }: Rec
   const [completedSteps, setCompletedSteps] = useState<Set<number>>(new Set());
 
   const getImageSrc = (imageName: string) => {
-    const imageMap: Record<string, string> = {
-      "masala-dosa-hero.jpg": masalaDosaHero,
-      "spaghetti-aglio-hero.jpg": spaghettiAglioHero,
-      "indian-spices.jpg": indianSpices,
-      "cooking-timer.jpg": cookingTimer,
-    };
-    return imageMap[imageName] || masalaDosaHero;
+    const imagePath = `/assets/${imageName}`;
+    const imageKey = Object.keys(images).find(key => images[key].includes(imagePath));
+    return imageKey ? images[imageKey] : images['/assets/masala-dosa-hero.jpg'];
   };
 
   const getCuisineGradient = (region: string, subregion: string) => {

@@ -4,10 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Clock, Users, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-// Import images
-import masalaDosaHero from "@/assets/masala-dosa-hero.jpg";
-import spaghettiAglioHero from "@/assets/spaghetti-aglio-hero.jpg";
-import indianSpices from "@/assets/indian-spices.jpg";
+const images = import.meta.glob('@/assets/*.jpg', { eager: true, as: 'url' });
 
 interface Recipe {
   id: string;
@@ -29,12 +26,9 @@ interface RecipeCardProps {
 
 export function RecipeCard({ recipe, onSelect }: RecipeCardProps) {
   const getImageSrc = (imageName: string) => {
-    const imageMap: Record<string, string> = {
-      "masala-dosa-hero.jpg": masalaDosaHero,
-      "spaghetti-aglio-hero.jpg": spaghettiAglioHero,
-      "indian-spices.jpg": indianSpices,
-    };
-    return imageMap[imageName] || masalaDosaHero;
+    const imagePath = `/assets/${imageName}`;
+    const imageKey = Object.keys(images).find(key => images[key].includes(imagePath));
+    return imageKey ? images[imageKey] : images['/assets/masala-dosa-hero.jpg'];
   };
 
   const getDifficultyColor = (difficulty: string) => {
