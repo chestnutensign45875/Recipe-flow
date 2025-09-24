@@ -127,7 +127,7 @@
       "id": "butter-chicken-north",
       "title": "Butter Chicken",
       "cuisine": { "region": "Indian", "subregion": "North Indian" },
-      "hero_image": "indian-spices.jpg",
+      "hero_image": "butter-chicken.jpg",
       "total_time_min": 60,
       "difficulty": "Medium",
       "serves": 4,
@@ -144,7 +144,7 @@
           "emoji": "🍗",
           "title": "Cook marinated chicken",
           "text": "Heat oil in heavy-bottomed pan. Add marinated chicken pieces and cook until golden brown on all sides, about 8-10 minutes. Remove and set aside.",
-          "image": "indian-spices.jpg",
+          "image": "butter-chicken.jpg",
           "timer_min": 10,
           "linked_ingredients": ["chicken", "yogurt"],
           "youtube": "MASTER_CHEF_OF_INDIA_BUTTER_CHICKEN"
@@ -154,7 +154,7 @@
           "emoji": "🧅",
           "title": "Make base gravy",
           "text": "In same pan, add butter, onions, ginger-garlic paste. Cook until onions are golden. Add tomato puree, cook for 15 minutes until oil separates.",
-          "image": "indian-spices.jpg",
+          "image": "butter-chicken.jpg",
           "timer_min": 15,
           "linked_ingredients": ["onion", "tomato", "butter"]
         },
@@ -163,7 +163,7 @@
           "emoji": "🥛",
           "title": "Finish with cream",
           "text": "Add chicken back to pan, pour in cream, add garam masala and salt. Simmer for 10 minutes until chicken is cooked through and sauce is creamy.",
-          "image": "indian-spices.jpg",
+          "image": "butter-chicken.jpg",
           "timer_min": 10,
           "linked_ingredients": ["cream", "garam masala"]
         }
@@ -188,7 +188,7 @@
       "id": "dal-tadka-north",
       "title": "Dal Tadka",
       "cuisine": { "region": "Indian", "subregion": "North Indian" },
-      "hero_image": "indian-spices.jpg",
+      "hero_image": "dal-tadka.jpg",
       "total_time_min": 35,
       "difficulty": "Easy",
       "serves": 4,
@@ -205,7 +205,7 @@
           "emoji": "🥄",
           "title": "Cook the dal",
           "text": "Pressure cook soaked toor dal with turmeric and salt until soft and mushy, about 15 minutes. Mash lightly and set aside.",
-          "image": "indian-spices.jpg",
+          "image": "dal-tadka.jpg",
           "timer_min": 15,
           "linked_ingredients": ["toor dal", "turmeric"],
           "youtube": "MASTER_CHEF_OF_INDIA_DAL_TADKA"
@@ -215,7 +215,7 @@
           "emoji": "🧄",
           "title": "Prepare tadka",
           "text": "Heat ghee in pan, add cumin seeds, garlic, and green chilies. When fragrant, add onions and cook until golden, about 5 minutes.",
-          "image": "indian-spices.jpg",
+          "image": "dal-tadka.jpg",
           "timer_min": 5,
           "linked_ingredients": ["ghee", "cumin seeds", "garlic"]
         },
@@ -224,7 +224,7 @@
           "emoji": "🍅",
           "title": "Add tomatoes and spices",
           "text": "Add tomatoes, red chili powder, and garam masala. Cook until tomatoes break down, about 8 minutes. Add cooked dal and simmer.",
-          "image": "indian-spices.jpg",
+          "image": "dal-tadka.jpg",
           "timer_min": 8,
           "linked_ingredients": ["tomato", "garam masala"]
         }
@@ -250,7 +250,7 @@
       "id": "palak-paneer-north",
       "title": "Palak Paneer",
       "cuisine": { "region": "Indian", "subregion": "North Indian" },
-      "hero_image": "indian-spices.jpg",
+      "hero_image": "palak-paneer.jpg",
       "total_time_min": 45,
       "difficulty": "Medium",
       "serves": 4,
@@ -267,7 +267,7 @@
           "emoji": "🥬",
           "title": "Prepare spinach puree",
           "text": "Blanch spinach in boiling water for 2 minutes, drain and blend into smooth puree. Lightly fry paneer cubes until golden.",
-          "image": "indian-spices.jpg",
+          "image": "palak-paneer.jpg",
           "timer_min": 5,
           "linked_ingredients": ["spinach", "paneer"],
           "youtube": "MASTER_CHEF_PALAK_PANEER_VIDEO"
@@ -277,7 +277,7 @@
           "emoji": "🧅",
           "title": "Make base gravy",
           "text": "Heat oil, add cumin seeds, ginger-garlic paste, and onions. Cook until golden, add tomatoes and cook for 10 minutes until soft.",
-          "image": "indian-spices.jpg",
+          "image": "palak-paneer.jpg",
           "timer_min": 10,
           "linked_ingredients": ["onion", "tomato", "ginger"]
         },
@@ -286,7 +286,7 @@
           "emoji": "🥛",
           "title": "Combine and finish",
           "text": "Add spinach puree, cream, and spices. Simmer for 8 minutes, then gently fold in fried paneer. Garnish with cream swirl.",
-          "image": "indian-spices.jpg",
+          "image": "palak-paneer.jpg",
           "timer_min": 8,
           "linked_ingredients": ["cream", "garam masala"]
         }
@@ -312,7 +312,7 @@
       "id": "chicken-tikka-masala-north",
       "title": "Chicken Tikka Masala",
       "cuisine": { "region": "Indian", "subregion": "North Indian" },
-      "hero_image": "indian-spices.jpg",
+      "hero_image": "chicken-tikka-masala.jpg",
       "total_time_min": 75,
       "difficulty": "Medium",
       "serves": 4,
@@ -329,7 +329,7 @@
           "emoji": "🍗",
           "title": "Grill marinated chicken",
           "text": "Thread marinated chicken onto skewers and grill or pan-cook until charred and cooked through, about 12-15 minutes. Set aside.",
-          "image": "indian-spices.jpg",
+          "image": "chicken-tikka-masala.jpg",
           "timer_min": 15,
           "linked_ingredients": ["chicken", "yogurt"],
           "youtube": "MASTER_CHEF_TIKKA_MASALA_VIDEO"
@@ -339,7 +339,7 @@
           "emoji": "🍅",
           "title": "Make masala base",
           "text": "Heat butter in heavy pan, sauté onions until golden. Add ginger-garlic, cook 2 minutes. Add tomatoes, cook until broken down, 12 minutes.",
-          "image": "indian-spices.jpg",
+          "image": "chicken-tikka-masala.jpg",
           "timer_min": 12,
           "linked_ingredients": ["butter", "onion", "tomato"]
         },
@@ -348,7 +348,7 @@
           "emoji": "🥥",
           "title": "Finish with cream",
           "text": "Add cooked chicken, heavy cream, and spices. Simmer gently for 10 minutes until sauce thickens. Garnish with cilantro.",
-          "image": "indian-spices.jpg",
+          "image": "chicken-tikka-masala.jpg",
           "timer_min": 10,
           "linked_ingredients": ["heavy cream", "garam masala"]
         }
@@ -374,7 +374,7 @@
       "id": "sambar-south",
       "title": "Sambar",
       "cuisine": { "region": "Indian", "subregion": "South Indian" },
-      "hero_image": "indian-spices.jpg",
+      "hero_image": "sambar.jpg",
       "total_time_min": 50,
       "difficulty": "Medium",
       "serves": 6,
@@ -402,7 +402,7 @@
           "emoji": "🌶️",
           "title": "Add tamarind and spices",
           "text": "Add cooked dal to vegetables, then tamarind water, sambar powder, and salt. Bring to boil and simmer for 15 minutes.",
-          "image": "indian-spices.jpg",
+          "image": "sambar.jpg",
           "timer_min": 15,
           "linked_ingredients": ["tamarind", "sambar powder"]
         },
@@ -411,7 +411,7 @@
           "emoji": "🍃",
           "title": "Prepare tempering",
           "text": "Heat oil, add mustard seeds, cumin, curry leaves, and dried chilies. When they splutter, pour over sambar. Simmer 5 more minutes.",
-          "image": "indian-spices.jpg",
+          "image": "sambar.jpg",
           "timer_min": 5,
           "linked_ingredients": ["mustard seeds", "curry leaves"]
         }
@@ -437,7 +437,7 @@
       "id": "chicken-biryani-north",
       "title": "Chicken Biryani",
       "cuisine": { "region": "Indian", "subregion": "North Indian" },
-      "hero_image": "indian-spices.jpg",
+      "hero_image": "chicken-biryani.jpg",
       "total_time_min": 90,
       "difficulty": "Hard",
       "serves": 6,
@@ -455,7 +455,7 @@
           "emoji": "🍚",
           "title": "Par-cook rice",
           "text": "Boil water with whole spices, add soaked basmati rice and cook 70% done, about 8 minutes. Drain and set aside.",
-          "image": "indian-spices.jpg",
+          "image": "chicken-biryani.jpg",
           "timer_min": 8,
           "linked_ingredients": ["basmati rice", "cardamom"],
           "youtube": "MASTER_CHEF_BIRYANI_VIDEO"
@@ -465,7 +465,7 @@
           "emoji": "🍗",
           "title": "Cook marinated chicken",
           "text": "In heavy-bottomed pot, cook marinated chicken with onions until 90% done, about 20 minutes. The chicken will finish cooking during dum.",
-          "image": "indian-spices.jpg",
+          "image": "chicken-biryani.jpg",
           "timer_min": 20,
           "linked_ingredients": ["chicken", "yogurt"]
         },
@@ -474,7 +474,7 @@
           "emoji": "🌸",
           "title": "Layer and cook dum",
           "text": "Layer rice over chicken, sprinkle saffron milk, fried onions, and ghee. Cover tight, cook on high 2 minutes, then low heat for 45 minutes.",
-          "image": "indian-spices.jpg",
+          "image": "chicken-biryani.jpg",
           "timer_min": 47,
           "linked_ingredients": ["saffron", "ghee"]
         }
@@ -500,7 +500,7 @@
       "id": "pad-thai-global",
       "title": "Pad Thai",
       "cuisine": { "region": "Global", "subregion": "Asian" },
-      "hero_image": "spaghetti-aglio-hero.jpg",
+      "hero_image": "pad-thai.jpg",
       "total_time_min": 25,
       "difficulty": "Medium",
       "serves": 2,
@@ -517,7 +517,7 @@
           "emoji": "🍜",
           "title": "Prepare noodles and sauce",
           "text": "Soak rice noodles in warm water until soft. Mix tamarind paste, fish sauce, palm sugar, and chili powder to make pad thai sauce.",
-          "image": "spaghetti-aglio-hero.jpg",
+          "image": "pad-thai.jpg",
           "timer_min": 5,
           "linked_ingredients": ["rice noodles", "tamarind paste"],
           "youtube": "AUTHENTIC_PAD_THAI_VIDEO"
@@ -527,7 +527,7 @@
           "emoji": "🍳",
           "title": "Stir-fry protein and aromatics",
           "text": "Heat wok, add oil, scramble eggs. Add shrimp, garlic, and shallots. Stir-fry for 3 minutes until shrimp turns pink.",
-          "image": "spaghetti-aglio-hero.jpg",
+          "image": "pad-thai.jpg",
           "timer_min": 3,
           "linked_ingredients": ["shrimp", "eggs"]
         },
@@ -536,7 +536,7 @@
           "emoji": "🥜",
           "title": "Combine and finish",
           "text": "Add drained noodles and sauce, toss for 2 minutes. Add bean sprouts, peanuts, and chives. Serve with lime wedges and extra peanuts.",
-          "image": "spaghetti-aglio-hero.jpg",
+          "image": "pad-thai.jpg",
           "timer_min": 2,
           "linked_ingredients": ["bean sprouts", "peanuts"]
         }
@@ -562,7 +562,7 @@
       "id": "margherita-pizza-global",
       "title": "Margherita Pizza",
       "cuisine": { "region": "Global", "subregion": "Italian" },
-      "hero_image": "spaghetti-aglio-hero.jpg",
+      "hero_image": "margherita-pizza.jpg",
       "total_time_min": 35,
       "difficulty": "Medium",
       "serves": 2,
@@ -579,7 +579,7 @@
           "emoji": "🍅",
           "title": "Prepare sauce and toppings",
           "text": "Mix crushed tomatoes with salt, oregano, and olive oil. Slice fresh mozzarella and prepare fresh basil leaves.",
-          "image": "spaghetti-aglio-hero.jpg",
+          "image": "margherita-pizza.jpg",
           "timer_min": 5,
           "linked_ingredients": ["tomatoes", "mozzarella"],
           "youtube": "AUTHENTIC_MARGHERITA_PIZZA_VIDEO"
@@ -589,7 +589,7 @@
           "emoji": "🍕",
           "title": "Shape and top pizza",
           "text": "Stretch dough into 12-inch circle, spread thin layer of sauce, add torn mozzarella pieces. Drizzle with olive oil.",
-          "image": "spaghetti-aglio-hero.jpg",
+          "image": "margherita-pizza.jpg",
           "timer_min": 3,
           "linked_ingredients": ["pizza dough", "olive oil"]
         },
@@ -598,7 +598,7 @@
           "emoji": "🔥",
           "title": "Bake until golden",
           "text": "Bake in preheated oven (500°F/260°C) for 10-12 minutes until crust is golden and cheese bubbles. Top with fresh basil before serving.",
-          "image": "spaghetti-aglio-hero.jpg",
+          "image": "margherita-pizza.jpg",
           "timer_min": 12,
           "linked_ingredients": ["basil"]
         }
