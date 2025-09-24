@@ -60,9 +60,8 @@ export function RecipeDetail({ recipe, onBack, onStartTimer, activeTimers }: Rec
   const [completedSteps, setCompletedSteps] = useState<Set<number>>(new Set());
 
   const getImageSrc = (imageName: string) => {
-    const imagePath = `/assets/${imageName}`;
-    const imageKey = Object.keys(images).find(key => images[key].includes(imagePath));
-    return imageKey ? images[imageKey] : images['/assets/masala-dosa-hero.jpg'];
+    const foundImageKey = Object.keys(images).find(key => key.endsWith(`/${imageName}`));
+    return foundImageKey ? images[foundImageKey] : images['/assets/masala-dosa-hero.jpg'];
   };
 
   const getCuisineGradient = (region: string, subregion: string) => {
