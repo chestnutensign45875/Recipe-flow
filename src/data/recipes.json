@@ -183,6 +183,440 @@
         "carbs": "12g",
         "fat": "32g"
       }
+    },
+    {
+      "id": "dal-tadka-north",
+      "title": "Dal Tadka",
+      "cuisine": { "region": "Indian", "subregion": "North Indian" },
+      "hero_image": "indian-spices.jpg",
+      "total_time_min": 35,
+      "difficulty": "Easy",
+      "serves": 4,
+      "prerequisites": [
+        "Toor dal soaked for 30 minutes",
+        "Onions and tomatoes chopped"
+      ],
+      "diet": ["vegetarian", "gluten-free", "dairy-free"],
+      "mood_tags": ["fast", "enjoy"],
+      "description": "Popular North Indian lentil curry with aromatic tempering of cumin, garlic, and spices.",
+      "steps": [
+        {
+          "index": 1,
+          "emoji": "🥄",
+          "title": "Cook the dal",
+          "text": "Pressure cook soaked toor dal with turmeric and salt until soft and mushy, about 15 minutes. Mash lightly and set aside.",
+          "image": "indian-spices.jpg",
+          "timer_min": 15,
+          "linked_ingredients": ["toor dal", "turmeric"],
+          "youtube": "MASTER_CHEF_OF_INDIA_DAL_TADKA"
+        },
+        {
+          "index": 2,
+          "emoji": "🧄",
+          "title": "Prepare tadka",
+          "text": "Heat ghee in pan, add cumin seeds, garlic, and green chilies. When fragrant, add onions and cook until golden, about 5 minutes.",
+          "image": "indian-spices.jpg",
+          "timer_min": 5,
+          "linked_ingredients": ["ghee", "cumin seeds", "garlic"]
+        },
+        {
+          "index": 3,
+          "emoji": "🍅",
+          "title": "Add tomatoes and spices",
+          "text": "Add tomatoes, red chili powder, and garam masala. Cook until tomatoes break down, about 8 minutes. Add cooked dal and simmer.",
+          "image": "indian-spices.jpg",
+          "timer_min": 8,
+          "linked_ingredients": ["tomato", "garam masala"]
+        }
+      ],
+      "ingredients": [
+        { "name": "toor dal", "qty": 1, "unit": "cup", "substitutions": ["moong dal", "masoor dal"] },
+        { "name": "ghee", "qty": 2, "unit": "tbsp", "substitutions": ["oil"] },
+        { "name": "cumin seeds", "qty": 1, "unit": "tsp", "substitutions": [] },
+        { "name": "garlic", "qty": 4, "unit": "cloves", "substitutions": [] },
+        { "name": "onion", "qty": 1, "unit": "medium", "substitutions": [] },
+        { "name": "tomato", "qty": 2, "unit": "medium", "substitutions": [] },
+        { "name": "turmeric", "qty": 0.5, "unit": "tsp", "substitutions": [] },
+        { "name": "garam masala", "qty": 1, "unit": "tsp", "substitutions": [] }
+      ],
+      "nutritional_info": {
+        "calories": 220,
+        "protein": "12g",
+        "carbs": "35g",
+        "fat": "6g"
+      }
+    },
+    {
+      "id": "palak-paneer-north",
+      "title": "Palak Paneer",
+      "cuisine": { "region": "Indian", "subregion": "North Indian" },
+      "hero_image": "indian-spices.jpg",
+      "total_time_min": 45,
+      "difficulty": "Medium",
+      "serves": 4,
+      "prerequisites": [
+        "Spinach blanched and pureed",
+        "Paneer cubed and lightly fried"
+      ],
+      "diet": ["vegetarian", "gluten-free"],
+      "mood_tags": ["enjoy", "relax"],
+      "description": "Creamy North Indian curry with tender paneer in a vibrant spinach gravy, rich with spices.",
+      "steps": [
+        {
+          "index": 1,
+          "emoji": "🥬",
+          "title": "Prepare spinach puree",
+          "text": "Blanch spinach in boiling water for 2 minutes, drain and blend into smooth puree. Lightly fry paneer cubes until golden.",
+          "image": "indian-spices.jpg",
+          "timer_min": 5,
+          "linked_ingredients": ["spinach", "paneer"],
+          "youtube": "MASTER_CHEF_PALAK_PANEER_VIDEO"
+        },
+        {
+          "index": 2,
+          "emoji": "🧅",
+          "title": "Make base gravy",
+          "text": "Heat oil, add cumin seeds, ginger-garlic paste, and onions. Cook until golden, add tomatoes and cook for 10 minutes until soft.",
+          "image": "indian-spices.jpg",
+          "timer_min": 10,
+          "linked_ingredients": ["onion", "tomato", "ginger"]
+        },
+        {
+          "index": 3,
+          "emoji": "🥛",
+          "title": "Combine and finish",
+          "text": "Add spinach puree, cream, and spices. Simmer for 8 minutes, then gently fold in fried paneer. Garnish with cream swirl.",
+          "image": "indian-spices.jpg",
+          "timer_min": 8,
+          "linked_ingredients": ["cream", "garam masala"]
+        }
+      ],
+      "ingredients": [
+        { "name": "spinach", "qty": 500, "unit": "g", "substitutions": ["kale", "mustard greens"] },
+        { "name": "paneer", "qty": 250, "unit": "g", "substitutions": ["tofu"] },
+        { "name": "onion", "qty": 1, "unit": "large", "substitutions": [] },
+        { "name": "tomato", "qty": 2, "unit": "medium", "substitutions": [] },
+        { "name": "cream", "qty": 0.25, "unit": "cup", "substitutions": ["coconut cream"] },
+        { "name": "ginger", "qty": 1, "unit": "inch", "substitutions": [] },
+        { "name": "cumin seeds", "qty": 1, "unit": "tsp", "substitutions": [] },
+        { "name": "garam masala", "qty": 1, "unit": "tsp", "substitutions": [] }
+      ],
+      "nutritional_info": {
+        "calories": 280,
+        "protein": "18g",
+        "carbs": "12g",
+        "fat": "20g"
+      }
+    },
+    {
+      "id": "chicken-tikka-masala-north",
+      "title": "Chicken Tikka Masala",
+      "cuisine": { "region": "Indian", "subregion": "North Indian" },
+      "hero_image": "indian-spices.jpg",
+      "total_time_min": 75,
+      "difficulty": "Medium",
+      "serves": 4,
+      "prerequisites": [
+        "Chicken marinated for 2+ hours",
+        "Onions and tomatoes prepared"
+      ],
+      "diet": ["gluten-free"],
+      "mood_tags": ["enjoy", "relax"],
+      "description": "Britain's favorite Indian dish - tender marinated chicken in a rich, creamy tomato-based curry.",
+      "steps": [
+        {
+          "index": 1,
+          "emoji": "🍗",
+          "title": "Grill marinated chicken",
+          "text": "Thread marinated chicken onto skewers and grill or pan-cook until charred and cooked through, about 12-15 minutes. Set aside.",
+          "image": "indian-spices.jpg",
+          "timer_min": 15,
+          "linked_ingredients": ["chicken", "yogurt"],
+          "youtube": "MASTER_CHEF_TIKKA_MASALA_VIDEO"
+        },
+        {
+          "index": 2,
+          "emoji": "🍅",
+          "title": "Make masala base",
+          "text": "Heat butter in heavy pan, sauté onions until golden. Add ginger-garlic, cook 2 minutes. Add tomatoes, cook until broken down, 12 minutes.",
+          "image": "indian-spices.jpg",
+          "timer_min": 12,
+          "linked_ingredients": ["butter", "onion", "tomato"]
+        },
+        {
+          "index": 3,
+          "emoji": "🥥",
+          "title": "Finish with cream",
+          "text": "Add cooked chicken, heavy cream, and spices. Simmer gently for 10 minutes until sauce thickens. Garnish with cilantro.",
+          "image": "indian-spices.jpg",
+          "timer_min": 10,
+          "linked_ingredients": ["heavy cream", "garam masala"]
+        }
+      ],
+      "ingredients": [
+        { "name": "chicken", "qty": 600, "unit": "g", "substitutions": ["paneer", "cauliflower"] },
+        { "name": "yogurt", "qty": 0.5, "unit": "cup", "substitutions": ["coconut yogurt"] },
+        { "name": "heavy cream", "qty": 0.5, "unit": "cup", "substitutions": ["coconut cream"] },
+        { "name": "butter", "qty": 3, "unit": "tbsp", "substitutions": ["ghee"] },
+        { "name": "onion", "qty": 2, "unit": "medium", "substitutions": [] },
+        { "name": "tomato", "qty": 400, "unit": "g", "substitutions": ["canned tomatoes"] },
+        { "name": "ginger", "qty": 1, "unit": "inch", "substitutions": [] },
+        { "name": "garam masala", "qty": 2, "unit": "tsp", "substitutions": [] }
+      ],
+      "nutritional_info": {
+        "calories": 450,
+        "protein": "32g",
+        "carbs": "15g",
+        "fat": "30g"
+      }
+    },
+    {
+      "id": "sambar-south",
+      "title": "Sambar",
+      "cuisine": { "region": "Indian", "subregion": "South Indian" },
+      "hero_image": "indian-spices.jpg",
+      "total_time_min": 50,
+      "difficulty": "Medium",
+      "serves": 6,
+      "prerequisites": [
+        "Toor dal cooked until soft",
+        "Vegetables chopped uniformly",
+        "Sambar powder ready"
+      ],
+      "diet": ["vegetarian", "gluten-free", "dairy-free"],
+      "mood_tags": ["enjoy", "relax"],
+      "description": "Traditional South Indian lentil soup with vegetables, tangy tamarind, and aromatic spices.",
+      "steps": [
+        {
+          "index": 1,
+          "emoji": "🥄",
+          "title": "Cook dal and vegetables",
+          "text": "Pressure cook toor dal until mushy. In another pot, cook mixed vegetables with turmeric and salt until tender, about 10 minutes.",
+          "image": "indian-spices.jpg",
+          "timer_min": 10,
+          "linked_ingredients": ["toor dal", "drumstick"],
+          "youtube": "MASTER_CHEF_SAMBAR_VIDEO"
+        },
+        {
+          "index": 2,
+          "emoji": "🌶️",
+          "title": "Add tamarind and spices",
+          "text": "Add cooked dal to vegetables, then tamarind water, sambar powder, and salt. Bring to boil and simmer for 15 minutes.",
+          "image": "indian-spices.jpg",
+          "timer_min": 15,
+          "linked_ingredients": ["tamarind", "sambar powder"]
+        },
+        {
+          "index": 3,
+          "emoji": "🍃",
+          "title": "Prepare tempering",
+          "text": "Heat oil, add mustard seeds, cumin, curry leaves, and dried chilies. When they splutter, pour over sambar. Simmer 5 more minutes.",
+          "image": "indian-spices.jpg",
+          "timer_min": 5,
+          "linked_ingredients": ["mustard seeds", "curry leaves"]
+        }
+      ],
+      "ingredients": [
+        { "name": "toor dal", "qty": 1, "unit": "cup", "substitutions": ["moong dal"] },
+        { "name": "drumstick", "qty": 2, "unit": "pieces", "substitutions": ["okra"] },
+        { "name": "tomato", "qty": 2, "unit": "medium", "substitutions": [] },
+        { "name": "onion", "qty": 1, "unit": "small", "substitutions": [] },
+        { "name": "tamarind", "qty": 2, "unit": "tbsp", "substitutions": [] },
+        { "name": "sambar powder", "qty": 2, "unit": "tbsp", "substitutions": [] },
+        { "name": "mustard seeds", "qty": 1, "unit": "tsp", "substitutions": [] },
+        { "name": "curry leaves", "qty": 10, "unit": "pieces", "substitutions": [] }
+      ],
+      "nutritional_info": {
+        "calories": 180,
+        "protein": "8g",
+        "carbs": "28g",
+        "fat": "5g"
+      }
+    },
+    {
+      "id": "chicken-biryani-north",
+      "title": "Chicken Biryani",
+      "cuisine": { "region": "Indian", "subregion": "North Indian" },
+      "hero_image": "indian-spices.jpg",
+      "total_time_min": 90,
+      "difficulty": "Hard",
+      "serves": 6,
+      "prerequisites": [
+        "Basmati rice soaked for 30 minutes",
+        "Chicken marinated for 2+ hours",
+        "Fried onions (birista) prepared"
+      ],
+      "diet": ["gluten-free"],
+      "mood_tags": ["enjoy", "relax"],
+      "description": "Royal layered rice dish with aromatic spiced chicken, saffron rice, and caramelized onions.",
+      "steps": [
+        {
+          "index": 1,
+          "emoji": "🍚",
+          "title": "Par-cook rice",
+          "text": "Boil water with whole spices, add soaked basmati rice and cook 70% done, about 8 minutes. Drain and set aside.",
+          "image": "indian-spices.jpg",
+          "timer_min": 8,
+          "linked_ingredients": ["basmati rice", "cardamom"],
+          "youtube": "MASTER_CHEF_BIRYANI_VIDEO"
+        },
+        {
+          "index": 2,
+          "emoji": "🍗",
+          "title": "Cook marinated chicken",
+          "text": "In heavy-bottomed pot, cook marinated chicken with onions until 90% done, about 20 minutes. The chicken will finish cooking during dum.",
+          "image": "indian-spices.jpg",
+          "timer_min": 20,
+          "linked_ingredients": ["chicken", "yogurt"]
+        },
+        {
+          "index": 3,
+          "emoji": "🌸",
+          "title": "Layer and cook dum",
+          "text": "Layer rice over chicken, sprinkle saffron milk, fried onions, and ghee. Cover tight, cook on high 2 minutes, then low heat for 45 minutes.",
+          "image": "indian-spices.jpg",
+          "timer_min": 47,
+          "linked_ingredients": ["saffron", "ghee"]
+        }
+      ],
+      "ingredients": [
+        { "name": "basmati rice", "qty": 2, "unit": "cups", "substitutions": ["jasmine rice"] },
+        { "name": "chicken", "qty": 750, "unit": "g", "substitutions": ["mutton"] },
+        { "name": "yogurt", "qty": 0.5, "unit": "cup", "substitutions": [] },
+        { "name": "saffron", "qty": 0.25, "unit": "tsp", "substitutions": [] },
+        { "name": "ghee", "qty": 4, "unit": "tbsp", "substitutions": ["oil"] },
+        { "name": "onion", "qty": 3, "unit": "large", "substitutions": [] },
+        { "name": "cardamom", "qty": 4, "unit": "pods", "substitutions": [] },
+        { "name": "garam masala", "qty": 2, "unit": "tsp", "substitutions": [] }
+      ],
+      "nutritional_info": {
+        "calories": 520,
+        "protein": "28g",
+        "carbs": "65g",
+        "fat": "18g"
+      }
+    },
+    {
+      "id": "pad-thai-global",
+      "title": "Pad Thai",
+      "cuisine": { "region": "Global", "subregion": "Asian" },
+      "hero_image": "spaghetti-aglio-hero.jpg",
+      "total_time_min": 25,
+      "difficulty": "Medium",
+      "serves": 2,
+      "prerequisites": [
+        "Rice noodles soaked until soft",
+        "All ingredients prepped and ready"
+      ],
+      "diet": ["gluten-free", "dairy-free"],
+      "mood_tags": ["fast", "enjoy"],
+      "description": "Thailand's national dish - stir-fried rice noodles with sweet, sour, and savory flavors.",
+      "steps": [
+        {
+          "index": 1,
+          "emoji": "🍜",
+          "title": "Prepare noodles and sauce",
+          "text": "Soak rice noodles in warm water until soft. Mix tamarind paste, fish sauce, palm sugar, and chili powder to make pad thai sauce.",
+          "image": "spaghetti-aglio-hero.jpg",
+          "timer_min": 5,
+          "linked_ingredients": ["rice noodles", "tamarind paste"],
+          "youtube": "AUTHENTIC_PAD_THAI_VIDEO"
+        },
+        {
+          "index": 2,
+          "emoji": "🍳",
+          "title": "Stir-fry protein and aromatics",
+          "text": "Heat wok, add oil, scramble eggs. Add shrimp, garlic, and shallots. Stir-fry for 3 minutes until shrimp turns pink.",
+          "image": "spaghetti-aglio-hero.jpg",
+          "timer_min": 3,
+          "linked_ingredients": ["shrimp", "eggs"]
+        },
+        {
+          "index": 3,
+          "emoji": "🥜",
+          "title": "Combine and finish",
+          "text": "Add drained noodles and sauce, toss for 2 minutes. Add bean sprouts, peanuts, and chives. Serve with lime wedges and extra peanuts.",
+          "image": "spaghetti-aglio-hero.jpg",
+          "timer_min": 2,
+          "linked_ingredients": ["bean sprouts", "peanuts"]
+        }
+      ],
+      "ingredients": [
+        { "name": "rice noodles", "qty": 200, "unit": "g", "substitutions": ["fresh noodles"] },
+        { "name": "shrimp", "qty": 200, "unit": "g", "substitutions": ["chicken", "tofu"] },
+        { "name": "eggs", "qty": 2, "unit": "pieces", "substitutions": [] },
+        { "name": "tamarind paste", "qty": 2, "unit": "tbsp", "substitutions": ["lime juice"] },
+        { "name": "fish sauce", "qty": 2, "unit": "tbsp", "substitutions": ["soy sauce"] },
+        { "name": "palm sugar", "qty": 2, "unit": "tbsp", "substitutions": ["brown sugar"] },
+        { "name": "bean sprouts", "qty": 1, "unit": "cup", "substitutions": [] },
+        { "name": "peanuts", "qty": 0.25, "unit": "cup", "substitutions": [] }
+      ],
+      "nutritional_info": {
+        "calories": 420,
+        "protein": "22g",
+        "carbs": "55g",
+        "fat": "12g"
+      }
+    },
+    {
+      "id": "margherita-pizza-global",
+      "title": "Margherita Pizza",
+      "cuisine": { "region": "Global", "subregion": "Italian" },
+      "hero_image": "spaghetti-aglio-hero.jpg",
+      "total_time_min": 35,
+      "difficulty": "Medium",
+      "serves": 2,
+      "prerequisites": [
+        "Pizza dough at room temperature",
+        "Oven preheated to highest temperature"
+      ],
+      "diet": ["vegetarian"],
+      "mood_tags": ["enjoy", "fast"],
+      "description": "Classic Neapolitan pizza with tomato sauce, fresh mozzarella, and basil - simple perfection.",
+      "steps": [
+        {
+          "index": 1,
+          "emoji": "🍅",
+          "title": "Prepare sauce and toppings",
+          "text": "Mix crushed tomatoes with salt, oregano, and olive oil. Slice fresh mozzarella and prepare fresh basil leaves.",
+          "image": "spaghetti-aglio-hero.jpg",
+          "timer_min": 5,
+          "linked_ingredients": ["tomatoes", "mozzarella"],
+          "youtube": "AUTHENTIC_MARGHERITA_PIZZA_VIDEO"
+        },
+        {
+          "index": 2,
+          "emoji": "🍕",
+          "title": "Shape and top pizza",
+          "text": "Stretch dough into 12-inch circle, spread thin layer of sauce, add torn mozzarella pieces. Drizzle with olive oil.",
+          "image": "spaghetti-aglio-hero.jpg",
+          "timer_min": 3,
+          "linked_ingredients": ["pizza dough", "olive oil"]
+        },
+        {
+          "index": 3,
+          "emoji": "🔥",
+          "title": "Bake until golden",
+          "text": "Bake in preheated oven (500°F/260°C) for 10-12 minutes until crust is golden and cheese bubbles. Top with fresh basil before serving.",
+          "image": "spaghetti-aglio-hero.jpg",
+          "timer_min": 12,
+          "linked_ingredients": ["basil"]
+        }
+      ],
+      "ingredients": [
+        { "name": "pizza dough", "qty": 1, "unit": "ball", "substitutions": ["naan bread"] },
+        { "name": "tomatoes", "qty": 400, "unit": "g", "substitutions": ["pizza sauce"] },
+        { "name": "mozzarella", "qty": 150, "unit": "g", "substitutions": ["burrata"] },
+        { "name": "basil", "qty": 10, "unit": "leaves", "substitutions": ["oregano"] },
+        { "name": "olive oil", "qty": 2, "unit": "tbsp", "substitutions": [] },
+        { "name": "oregano", "qty": 1, "unit": "tsp", "substitutions": [] }
+      ],
+      "nutritional_info": {
+        "calories": 380,
+        "protein": "18g",
+        "carbs": "45g",
+        "fat": "15g"
+      }
     }
   ],
   "cuisines": [
