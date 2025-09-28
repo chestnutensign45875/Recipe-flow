@@ -117,19 +117,20 @@ export function RecipeDetail({ recipe, onBack, onStartTimer, activeTimers }: Rec
     <div className="flex-1 overflow-y-auto">
       {/* Header */}
       <div className="sticky top-0 bg-background/95 backdrop-blur-sm z-10 border-b">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center gap-4">
+        <div className="px-4 sm:px-6 py-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <Button variant="ghost" size="sm" onClick={onBack}>
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Recipes
+              <ArrowLeft className="h-4 w-4 mr-1 sm:mr-2" />
+              <span className="hidden sm:inline">Back to Recipes</span>
+              <span className="sm:hidden">Back</span>
             </Button>
-            <Separator orientation="vertical" className="h-6" />
+            <Separator orientation="vertical" className="h-6 hidden sm:block" />
             <div className="flex items-center gap-2">
               <div className={cn(
-                "w-3 h-3 rounded-full",
+                "w-2 h-2 sm:w-3 sm:h-3 rounded-full",
                 getCuisineGradient(recipe.cuisine.region, recipe.cuisine.subregion)
               )} />
-              <span className="text-sm text-muted-foreground">
+              <span className="text-xs sm:text-sm text-muted-foreground">
                 {recipe.cuisine.subregion}
               </span>
             </div>
@@ -137,34 +138,34 @@ export function RecipeDetail({ recipe, onBack, onStartTimer, activeTimers }: Rec
         </div>
       </div>
 
-      <div className="container mx-auto px-6 py-8">
+      <div className="px-4 sm:px-6 py-6 sm:py-8">
         {/* Hero Section */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-8">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div className="relative">
             <img 
               src={getImageSrc(recipe.hero_image)}
               alt={recipe.title}
-              className="w-full h-80 object-cover rounded-lg shadow-soft"
+              className="w-full h-60 sm:h-80 object-cover rounded-lg shadow-soft"
             />
             <div className={cn(
-              "absolute top-4 left-4 px-3 py-1 rounded-full text-white text-sm font-medium",
+              "absolute top-3 sm:top-4 left-3 sm:left-4 px-2 sm:px-3 py-1 rounded-full text-white text-xs sm:text-sm font-medium",
               getCuisineGradient(recipe.cuisine.region, recipe.cuisine.subregion)
             )}>
               {recipe.difficulty}
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <div>
-              <h1 className="text-4xl font-bold mb-3">{recipe.title}</h1>
-              <p className="text-lg text-muted-foreground mb-4">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3">{recipe.title}</h1>
+              <p className="text-base sm:text-lg text-muted-foreground mb-3 sm:mb-4">
                 {recipe.description}
               </p>
               
-              <div className="flex items-center gap-6 text-sm">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-sm">
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4 text-primary" />
-                  <span>{recipe.total_time_min} minutes</span>
+                  <span>{recipe.total_time_min} min</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="h-4 w-4 text-primary" />
@@ -205,9 +206,9 @@ export function RecipeDetail({ recipe, onBack, onStartTimer, activeTimers }: Rec
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Prerequisites & Ingredients */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6 lg:order-1 order-2">
             {/* Prerequisites */}
             <Card>
               <CardHeader>
@@ -269,18 +270,18 @@ export function RecipeDetail({ recipe, onBack, onStartTimer, activeTimers }: Rec
           </div>
 
           {/* Cooking Steps */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-4 sm:space-y-6 lg:order-2 order-1">
             <div className="flex items-center gap-3">
-              <h2 className="text-2xl font-bold">Cooking Steps</h2>
-              <Badge variant="outline">{recipe.steps.length} steps</Badge>
+              <h2 className="text-xl sm:text-2xl font-bold">Cooking Steps</h2>
+              <Badge variant="outline" className="text-xs">{recipe.steps.length} steps</Badge>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {recipe.steps.map((step, index) => (
                 <Card key={step.index} className="overflow-hidden">
-                  <CardContent className="p-6">
-                    <div className="grid md:grid-cols-3 gap-6">
-                      <div className="md:col-span-2 space-y-4">
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="grid gap-4 sm:gap-6">
+                      <div className="space-y-4">
                         <div className="flex items-start gap-4">
                           <div className={cn(
                             "flex items-center justify-center w-10 h-10 rounded-full font-bold text-white",
@@ -351,11 +352,11 @@ export function RecipeDetail({ recipe, onBack, onStartTimer, activeTimers }: Rec
                         </div>
                       </div>
 
-                      <div className="relative">
+                      <div className="relative sm:w-48 sm:ml-auto">
                         <img 
                           src={getImageSrc(step.image)}
                           alt={`Step ${step.index}: ${step.title}`}
-                          className="w-full h-32 object-cover rounded-lg"
+                          className="w-full h-32 sm:h-24 object-cover rounded-lg"
                         />
                         {step.timer_min > 0 && (
                           <div className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded text-xs">

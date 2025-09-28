@@ -6,7 +6,8 @@ import { TimerTray, ActiveTimer } from "@/components/TimerTray";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Search, Filter, Sparkles } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Search, Filter, Sparkles, Menu } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import recipesData from "@/data/recipes.json";
@@ -18,6 +19,7 @@ const Index = () => {
   const [activeTimers, setActiveTimers] = useState<ActiveTimer[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [moodFilter, setMoodFilter] = useState<string | null>(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const moods = [
     { name: "fast", emoji: "⚡", color: "bg-timer-warning" },
@@ -115,7 +117,7 @@ const Index = () => {
 
   if (selectedRecipeData) {
     return (
-      <div className="min-h-screen bg-background flex">
+      <div className="min-h-screen bg-background">
         <RecipeDetail 
           recipe={selectedRecipeData}
           onBack={handleBackToRecipes}
@@ -133,48 +135,77 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background flex">
-      {/* Cuisine Selector Sidebar */}
-      <CuisineSelector 
-        selectedCuisine={selectedCuisine}
-        selectedSubregion={selectedSubregion}
-        onCuisineSelect={handleCuisineSelect}
-      />
+    <div className="min-h-screen bg-background">
+      {/* Desktop Sidebar */}
+      <div className="hidden lg:block fixed left-0 top-0 h-full">
+        <CuisineSelector 
+          selectedCuisine={selectedCuisine}
+          selectedSubregion={selectedSubregion}
+          onCuisineSelect={handleCuisineSelect}
+        />
+      </div>
+
+      {/* Mobile Sidebar Sheet */}
+      <Sheet open={isSidebarOpen} onOpenChange={setIsSidebarOpen}>
+        <SheetContent side="left" className="w-80 p-0">
+          <CuisineSelector 
+            selectedCuisine={selectedCuisine}
+            selectedSubregion={selectedSubregion}
+            onCuisineSelect={(region, subregion) => {
+              handleCuisineSelect(region, subregion);
+              setIsSidebarOpen(false);
+            }}
+          />
+        </SheetContent>
+      </Sheet>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col">
-        {/* Header */}
-        <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-10">
-          <div className="container mx-auto px-6 py-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <h1 className="text-2xl font-bold">
-                  {selectedCuisine && selectedSubregion ? (
-                    `${selectedSubregion} Recipes`
-                  ) : (
-                    "Discover Recipes"
-                  )}
-                </h1>
-                <p className="text-sm text-muted-foreground">
-                  {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''} found
-                </p>
+      <div className="lg:ml-80">
+        <div className="flex flex-col min-h-screen">
+          {/* Header */}
+          <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-10">
+            <div className="px-4 sm:px-6 py-4">
+              <div className="flex items-center justify-between mb-4 lg:mb-0">
+                <div className="flex items-center gap-3">
+                  {/* Mobile menu button */}
+                  <Sheet open={isSidebarOpen} onOpenChange={setIsSidebarOpen}>
+                    <SheetTrigger asChild>
+                      <Button variant="ghost" size="sm" className="lg:hidden">
+                        <Menu className="h-4 w-4" />
+                      </Button>
+                    </SheetTrigger>
+                  </Sheet>
+                  
+                  <div>
+                    <h1 className="text-xl sm:text-2xl font-bold">
+                      {selectedCuisine && selectedSubregion ? (
+                        `${selectedSubregion} Recipes`
+                      ) : (
+                        "Discover Recipes"
+                      )}
+                    </h1>
+                    <p className="text-sm text-muted-foreground">
+                      {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''} found
+                    </p>
+                  </div>
+                </div>
               </div>
               
-              <div className="flex items-center gap-4">
+              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                 {/* Search */}
-                <div className="relative">
+                <div className="relative flex-1 max-w-md">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input 
                     placeholder="Search recipes, ingredients..."
-                    className="pl-10 w-64"
+                    className="pl-10 w-full"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
                 </div>
 
                 {/* Mood Filter */}
-                <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-muted-foreground" />
+                <div className="flex items-center gap-2 overflow-x-auto">
+                  <Sparkles className="h-4 w-4 text-muted-foreground flex-shrink-0" />
                   <div className="flex gap-2">
                     {moods.map((mood) => (
                       <Button
@@ -182,7 +213,7 @@ const Index = () => {
                         variant={moodFilter === mood.name ? "default" : "outline"}
                         size="sm"
                         className={cn(
-                          "text-xs",
+                          "text-xs whitespace-nowrap",
                           moodFilter === mood.name && "bg-gradient-saffron"
                         )}
                         onClick={() => setMoodFilter(
@@ -195,84 +226,84 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Active Filters */}
-            {(selectedCuisine || moodFilter || searchQuery) && (
-              <div className="flex items-center gap-2 mt-4">
-                <Filter className="h-4 w-4 text-muted-foreground" />
-                <div className="flex gap-2 flex-wrap">
-                  {selectedCuisine && selectedSubregion && (
-                    <Badge variant="secondary" className="gap-2">
-                      {selectedSubregion}
-                      <button 
-                        onClick={() => handleCuisineSelect("", null)}
-                        className="hover:bg-muted-foreground/20 rounded-full p-0.5"
-                      >
-                        ×
-                      </button>
-                    </Badge>
-                  )}
-                  {moodFilter && (
-                    <Badge variant="secondary" className="gap-2">
-                      {moods.find(m => m.name === moodFilter)?.emoji} {moodFilter}
-                      <button 
-                        onClick={() => setMoodFilter(null)}
-                        className="hover:bg-muted-foreground/20 rounded-full p-0.5"
-                      >
-                        ×
-                      </button>
-                    </Badge>
-                  )}
-                  {searchQuery && (
-                    <Badge variant="secondary" className="gap-2">
-                      "{searchQuery}"
-                      <button 
-                        onClick={() => setSearchQuery("")}
-                        className="hover:bg-muted-foreground/20 rounded-full p-0.5"
-                      >
-                        ×
-                      </button>
-                    </Badge>
-                  )}
+              {/* Active Filters */}
+              {(selectedCuisine || moodFilter || searchQuery) && (
+                <div className="flex items-center gap-2 mt-4">
+                  <Filter className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                  <div className="flex gap-2 flex-wrap">
+                    {selectedCuisine && selectedSubregion && (
+                      <Badge variant="secondary" className="gap-2">
+                        {selectedSubregion}
+                        <button 
+                          onClick={() => handleCuisineSelect("", null)}
+                          className="hover:bg-muted-foreground/20 rounded-full p-0.5"
+                        >
+                          ×
+                        </button>
+                      </Badge>
+                    )}
+                    {moodFilter && (
+                      <Badge variant="secondary" className="gap-2">
+                        {moods.find(m => m.name === moodFilter)?.emoji} {moodFilter}
+                        <button 
+                          onClick={() => setMoodFilter(null)}
+                          className="hover:bg-muted-foreground/20 rounded-full p-0.5"
+                        >
+                          ×
+                        </button>
+                      </Badge>
+                    )}
+                    {searchQuery && (
+                      <Badge variant="secondary" className="gap-2">
+                        "{searchQuery}"
+                        <button 
+                          onClick={() => setSearchQuery("")}
+                          className="hover:bg-muted-foreground/20 rounded-full p-0.5"
+                        >
+                          ×
+                        </button>
+                      </Badge>
+                    )}
+                  </div>
                 </div>
+              )}
+            </div>
+          </header>
+
+          {/* Recipe Grid */}
+          <main className="flex-1 px-4 sm:px-6 py-6 sm:py-8">
+            {filteredRecipes.length === 0 ? (
+              <div className="text-center py-16">
+                <div className="text-4xl sm:text-6xl mb-4">🍽️</div>
+                <h2 className="text-xl sm:text-2xl font-bold mb-2">No recipes found</h2>
+                <p className="text-muted-foreground mb-6">
+                  Try adjusting your filters or search terms
+                </p>
+                <Button 
+                  variant="outline"
+                  onClick={() => {
+                    setSearchQuery("");
+                    setMoodFilter(null);
+                    handleCuisineSelect("", null);
+                  }}
+                >
+                  Clear All Filters
+                </Button>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+                {filteredRecipes.map((recipe) => (
+                  <RecipeCard 
+                    key={recipe.id}
+                    recipe={recipe}
+                    onSelect={handleRecipeSelect}
+                  />
+                ))}
               </div>
             )}
-          </div>
-        </header>
-
-        {/* Recipe Grid */}
-        <main className="flex-1 container mx-auto px-6 py-8">
-          {filteredRecipes.length === 0 ? (
-            <div className="text-center py-16">
-              <div className="text-6xl mb-4">🍽️</div>
-              <h2 className="text-2xl font-bold mb-2">No recipes found</h2>
-              <p className="text-muted-foreground mb-6">
-                Try adjusting your filters or search terms
-              </p>
-              <Button 
-                variant="outline"
-                onClick={() => {
-                  setSearchQuery("");
-                  setMoodFilter(null);
-                  handleCuisineSelect("", null);
-                }}
-              >
-                Clear All Filters
-              </Button>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredRecipes.map((recipe) => (
-                <RecipeCard 
-                  key={recipe.id}
-                  recipe={recipe}
-                  onSelect={handleRecipeSelect}
-                />
-              ))}
-            </div>
-          )}
-        </main>
+          </main>
+        </div>
       </div>
 
       {/* Timer Tray */}

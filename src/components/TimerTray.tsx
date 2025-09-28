@@ -67,76 +67,77 @@ export function TimerTray({ timers, onTimerUpdate, onTimerComplete, onTimerRemov
   if (timers.length === 0) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 w-80 max-h-96 overflow-y-auto">
+    <div className="fixed bottom-4 sm:bottom-6 right-2 sm:right-6 w-[calc(100vw-1rem)] sm:w-80 max-w-sm max-h-96 overflow-y-auto z-20">
       <Card className="shadow-soft">
-        <CardContent className="p-4">
-          <div className="flex items-center gap-2 mb-4">
-            <Timer className="h-5 w-5 text-primary" />
-            <h3 className="font-semibold">Active Timers</h3>
-            <Badge variant="secondary">{timers.length}</Badge>
+        <CardContent className="p-3 sm:p-4">
+          <div className="flex items-center gap-2 mb-3 sm:mb-4">
+            <Timer className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+            <h3 className="font-semibold text-sm sm:text-base">Active Timers</h3>
+            <Badge variant="secondary" className="text-xs">{timers.length}</Badge>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-2 sm:space-y-3">
             {timers.map((timer) => {
               const status = getTimerStatus(timer);
               return (
-                <Card key={timer.id} className={cn("p-3 border", getStatusColor(status))}>
+                <Card key={timer.id} className={cn("p-2 sm:p-3 border", getStatusColor(status))}>
                   <div className="flex items-center justify-between mb-2">
-                    <div className="flex-1">
-                      <div className="font-medium text-sm">{timer.name}</div>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-medium text-xs sm:text-sm truncate">{timer.name}</div>
                       {timer.linkedIngredient && (
-                        <div className="text-xs text-muted-foreground">
+                        <div className="text-xs text-muted-foreground truncate">
                           🥘 {timer.linkedIngredient}
                         </div>
                       )}
                     </div>
                     <div className={cn(
-                      "text-xl font-mono font-bold",
+                      "text-lg sm:text-xl font-mono font-bold ml-2",
                       status === 'complete' && "animate-pulse-timer"
                     )}>
                       {formatTime(timer.remainingSeconds)}
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1 sm:gap-2">
                     <Button
                       size="sm"
                       variant="outline"
-                      className="h-8 w-8 p-0"
+                      className="h-6 w-6 sm:h-8 sm:w-8 p-0"
                       onClick={() => onTimerUpdate(timer.id, { isRunning: !timer.isRunning })}
                       disabled={timer.remainingSeconds === 0}
                     >
                       {timer.isRunning ? (
-                        <Pause className="h-3 w-3" />
+                        <Pause className="h-2 w-2 sm:h-3 sm:w-3" />
                       ) : (
-                        <Play className="h-3 w-3" />
+                        <Play className="h-2 w-2 sm:h-3 sm:w-3" />
                       )}
                     </Button>
 
                     <Button
                       size="sm"
                       variant="outline"
-                      className="h-8 w-8 p-0"
+                      className="h-6 w-6 sm:h-8 sm:w-8 p-0"
                       onClick={() => onTimerUpdate(timer.id, { 
                         remainingSeconds: timer.totalSeconds,
                         isRunning: false 
                       })}
                     >
-                      <RotateCcw className="h-3 w-3" />
+                      <RotateCcw className="h-2 w-2 sm:h-3 sm:w-3" />
                     </Button>
 
                     <Button
                       size="sm"
                       variant="outline"
-                      className="h-8 w-8 p-0 hover:bg-destructive hover:text-destructive-foreground"
+                      className="h-6 w-6 sm:h-8 sm:w-8 p-0 hover:bg-destructive hover:text-destructive-foreground"
                       onClick={() => onTimerRemove(timer.id)}
                     >
-                      <Square className="h-3 w-3" />
+                      <Square className="h-2 w-2 sm:h-3 sm:w-3" />
                     </Button>
 
                     {status === 'complete' && (
-                      <Badge className="bg-timer-complete text-white animate-bounce-timer">
-                        Done! 🎉
+                      <Badge className="bg-timer-complete text-white animate-bounce-timer text-xs ml-auto">
+                        <span className="hidden sm:inline">Done! 🎉</span>
+                        <span className="sm:hidden">🎉</span>
                       </Badge>
                     )}
                   </div>
